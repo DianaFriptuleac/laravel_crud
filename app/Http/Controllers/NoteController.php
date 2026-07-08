@@ -15,11 +15,11 @@ class NoteController extends Controller
     {
          // Recupera tutte le note ordinate dalla più recente alla meno recente
         // e le divide in pagine da 10 risultati
-        $note = Note::latest()->paginate(10);
+        $notes = Note::latest()->paginate(10);
 
          // Restituisce la vista notes.index
         // passando la variabile $note alla vista.
-        return view('notes.index', compact('note'));
+        return view('notes.index', compact('notes'));
     }
 
     /**
