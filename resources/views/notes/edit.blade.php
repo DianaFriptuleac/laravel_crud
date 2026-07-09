@@ -34,8 +34,8 @@
         @enderror
     </div>
 
-    <button class="btn btn-primary">Aggiorna</button>
-    <a href="{{ route('notes.index') }}" class="btn btn-secondary">Annulla</a>
+    <button class="btn btn-primary mb-3 w-25 m-auto">Aggiorna</button>
+    <a href="{{ route('notes.index') }}" class="btn btn-secondary w-25 m-auto">Annulla</a>
 
 </form>
 
