@@ -1,8 +1,9 @@
 <?php
 // che gestirà tutte le operazioni sulle note
+
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\NoteController;
 
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 // Definisce una rotta GET per l'URL principale "/"
@@ -24,3 +25,6 @@ Route::get('/', function () {
 // PUT/PATCH /notes/{note}       -> update()
 // DELETE    /notes/{note}       -> destroy()
 Route::resource('notes', NoteController::class);
+
+// Route courses
+Route::resource('courses', CourseController::class);
