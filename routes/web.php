@@ -1,6 +1,7 @@
 <?php
 // che gestirà tutte le operazioni sulle note
 
+use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\NoteController;
 
@@ -28,3 +29,6 @@ Route::resource('notes', NoteController::class);
 
 // Route courses
 Route::resource('courses', CourseController::class);
+
+//Route articles
+Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
