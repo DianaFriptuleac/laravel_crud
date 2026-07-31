@@ -33,13 +33,37 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('articles.index') }}">
+                            <i class="bi bi-file-earmark-text me-1"></i> Articoli
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('articles.create') }}">
+                            <i class="bi bi-plus-circle me-1"></i> Crea articolo
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-     <main class="py-4">
+    <main class="py-4">
         <div class="container">
-        @yield('content')
+            @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Chiudi"></button>
+            </div>
+            @endif
+            
+            @yield('content')
         </div>
     </main>
 

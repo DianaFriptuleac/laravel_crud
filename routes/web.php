@@ -31,4 +31,5 @@ Route::resource('notes', NoteController::class);
 Route::resource('courses', CourseController::class);
 
 //Route articles
-Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
+//Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
+Route::resource('articles', ArticlesController::class);
